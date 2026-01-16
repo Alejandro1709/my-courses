@@ -1,6 +1,7 @@
+import type { IStat } from "@/types/stat.interface";
 import { TrendingUp, Award, BookMarked, Clock } from "lucide-react";
 
-const stats = [
+const stats: IStat[] = [
   {
     id: 1,
     icon: BookMarked,

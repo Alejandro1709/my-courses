@@ -1,7 +1,8 @@
+import { Link } from "react-router";
 import { BookMarked, TrendingUp, Users } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import type { ICourse } from "@/types/course.interface";
-import { Progress } from "../ui/progress";
 
 interface Props {
   course: ICourse;
@@ -34,7 +35,7 @@ function CourseCard({ course }: Props) {
             </span>
           </div>
           <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-            {course.grade}
+            {course.room}
           </div>
         </div>
 
@@ -54,8 +55,12 @@ function CourseCard({ course }: Props) {
 
         {/* Action Buttons */}
         <div className="flex gap-2 pt-2">
-          <Button variant="outline" className="flex-1 text-sm bg-transparent">
-            Ver Detalles
+          <Button
+            variant="outline"
+            className="flex-1 text-sm bg-transparent"
+            asChild
+          >
+            <Link to={`/courses/${course.id}`}>Ver Detalles</Link>
           </Button>
           <Button className="flex-1 text-sm bg-primary hover:bg-primary/90">
             <TrendingUp className="w-4 h-4 mr-1" />
