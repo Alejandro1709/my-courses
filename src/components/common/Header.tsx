@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router";
 import { Bell, Plus, Settings, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="border-b border-border bg-card">
       <div className="px-6 py-4 flex items-center justify-between">
@@ -11,7 +14,10 @@ function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="gap-2 bg-primary hover:bg-primary/90">
+          <Button
+            className="gap-2 bg-primary hover:bg-primary/90 cursor-pointer"
+            onClick={() => navigate("/courses/new")}
+          >
             <Plus className="w-4 h-4" />
             Añadir Curso
           </Button>
