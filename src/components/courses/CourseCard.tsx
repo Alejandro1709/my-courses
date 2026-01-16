@@ -1,6 +1,7 @@
 import { BookMarked, TrendingUp, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import type { ICourse } from "@/types/course.interface";
+import { Progress } from "../ui/progress";
 
 interface Props {
   course: ICourse;
@@ -47,12 +48,8 @@ function CourseCard({ course }: Props) {
               {course.progress}%
             </span>
           </div>
-          <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
-            <div
-              className="bg-primary h-full rounded-full transition-all duration-500"
-              style={{ width: `${course.progress}%` }}
-            />
-          </div>
+
+          <Progress value={course.progress} />
         </div>
 
         {/* Action Buttons */}
