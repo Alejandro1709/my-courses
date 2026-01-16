@@ -1,7 +1,12 @@
 import { BookMarked, TrendingUp, Users } from "lucide-react";
 import { Button } from "../ui/button";
+import type { ICourse } from "@/types/course.interface";
 
-function CourseCard({ course }) {
+interface Props {
+  course: ICourse;
+}
+
+function CourseCard({ course }: Props) {
   return (
     <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary">
       {/* Header Gradient */}
