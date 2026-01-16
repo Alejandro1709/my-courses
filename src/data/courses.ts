@@ -1,0 +1,58 @@
+const courses = [
+  {
+    id: 1,
+    name: "Cálculo I",
+    professor: "Dr. García López",
+    credits: 4,
+    progress: 85,
+    grade: "A-",
+    color: "from-blue-400 to-blue-600",
+  },
+  {
+    id: 2,
+    name: "Programación Avanzada",
+    professor: "Ing. María Rodríguez",
+    credits: 3,
+    progress: 72,
+    grade: "A",
+    color: "from-purple-400 to-purple-600",
+  },
+  {
+    id: 3,
+    name: "Física General",
+    professor: "Dr. Carlos Mendez",
+    credits: 4,
+    progress: 60,
+    grade: "B+",
+    color: "from-emerald-400 to-emerald-600",
+  },
+  {
+    id: 4,
+    name: "Inglés Técnico",
+    professor: "Prof. Jennifer Smith",
+    credits: 3,
+    progress: 92,
+    grade: "A+",
+    color: "from-amber-400 to-amber-600",
+  },
+  {
+    id: 5,
+    name: "Álgebra Lineal",
+    professor: "Dr. Roberto Silva",
+    credits: 3,
+    progress: 78,
+    grade: "A-",
+    color: "from-pink-400 to-pink-600",
+  },
+  {
+    id: 6,
+    name: "Química Orgánica",
+    professor: "Dra. Ana García",
+    credits: 4,
+    progress: 55,
+    grade: "B",
+    color: "from-orange-400 to-orange-600",
+  },
+];
+
+export default courses;

@@ -1,99 +1,16 @@
 import CourseCard from "@/components/courses/CourseCard";
-import { TrendingUp, Award, BookMarked, Clock } from "lucide-react";
+import courses from "@/data/courses";
+import stats from "@/data/stats";
 
 function IndexPage() {
-  const stats = [
-    {
-      icon: BookMarked,
-      label: "Cursos Activos",
-      value: "6",
-      color: "bg-primary",
-    },
-    {
-      icon: Award,
-      label: "Promedio General",
-      value: "3.8",
-      color: "bg-accent",
-    },
-    {
-      icon: TrendingUp,
-      label: "Progreso Semestre",
-      value: "65%",
-      color: "bg-chart-2",
-    },
-    {
-      icon: Clock,
-      label: "Tareas Pendientes",
-      value: "4",
-      color: "bg-chart-3",
-    },
-  ];
-
-  const courses = [
-    {
-      id: 1,
-      name: "Cálculo I",
-      professor: "Dr. García López",
-      credits: 4,
-      progress: 85,
-      grade: "A-",
-      color: "from-blue-400 to-blue-600",
-    },
-    {
-      id: 2,
-      name: "Programación Avanzada",
-      professor: "Ing. María Rodríguez",
-      credits: 3,
-      progress: 72,
-      grade: "A",
-      color: "from-purple-400 to-purple-600",
-    },
-    {
-      id: 3,
-      name: "Física General",
-      professor: "Dr. Carlos Mendez",
-      credits: 4,
-      progress: 60,
-      grade: "B+",
-      color: "from-emerald-400 to-emerald-600",
-    },
-    {
-      id: 4,
-      name: "Inglés Técnico",
-      professor: "Prof. Jennifer Smith",
-      credits: 3,
-      progress: 92,
-      grade: "A+",
-      color: "from-amber-400 to-amber-600",
-    },
-    {
-      id: 5,
-      name: "Álgebra Lineal",
-      professor: "Dr. Roberto Silva",
-      credits: 3,
-      progress: 78,
-      grade: "A-",
-      color: "from-pink-400 to-pink-600",
-    },
-    {
-      id: 6,
-      name: "Química Orgánica",
-      professor: "Dra. Ana García",
-      credits: 4,
-      progress: 55,
-      grade: "B",
-      color: "from-orange-400 to-orange-600",
-    },
-  ];
-
   return (
     <>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {stats.map((stat, index) => {
+        {stats.map((stat) => {
           const Icon = stat.icon;
           return (
             <div
-              key={index}
+              key={stat.id}
               className="bg-card border border-border rounded-lg p-6"
             >
               <div className="flex items-start justify-between">
