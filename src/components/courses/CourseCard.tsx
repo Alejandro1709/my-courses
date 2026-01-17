@@ -27,7 +27,7 @@ function CourseCard({ course }: Props) {
         </div>
 
         {/* Grade and Credits */}
-        <div className="flex items-center justify-between py-3 border-y border-border">
+        <div className="flex items-center justify-between py-2 border-y border-border">
           <div className="flex items-center gap-2">
             <BookMarked className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
@@ -40,7 +40,7 @@ function CourseCard({ course }: Props) {
         </div>
 
         {/* Schedule and Room */}
-        <div className="flex items-center justify-between py-3 border-b border-border">
+        <div className="flex items-center justify-between py-2 border-b border-border">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
