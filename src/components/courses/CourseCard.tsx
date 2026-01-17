@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { BookMarked, TrendingUp, Users } from "lucide-react";
+import { BookMarked, Clock, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import type { ICourse } from "@/types/course.interface";
@@ -18,7 +18,7 @@ function CourseCard({ course }: Props) {
       <div className="p-6 space-y-4">
         <div>
           <h3 className="text-lg font-bold text-foreground mb-1">
-            {course.name}
+            {course.name} | {course.code}
           </h3>
           <p className="text-sm text-muted-foreground flex items-center gap-2">
             <Users className="w-4 h-4" />
@@ -32,6 +32,19 @@ function CourseCard({ course }: Props) {
             <BookMarked className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
               {course.credits} créditos
+            </span>
+          </div>
+          <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+            {course.grade}
+          </div>
+        </div>
+
+        {/* Schedule and Room */}
+        <div className="flex items-center justify-between py-3 border-b border-border">
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4 text-primary" />
+            <span className="text-sm text-muted-foreground">
+              {course.schedule}
             </span>
           </div>
           <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
