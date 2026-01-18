@@ -9,5 +9,6 @@ export interface ICourse {
   credits: number;
   progress: number;
   grade: string;
+  status: "in-progress" | "completed" | "not-started";
   color: string;
 }

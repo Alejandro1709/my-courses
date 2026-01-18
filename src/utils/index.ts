@@ -13,3 +13,29 @@ export const getRandomGradient = (): string => {
 
   return colors[randomIdx];
 };
+
+export const getStatus = (status: string): string => {
+  switch (status) {
+    case "in-progress":
+      return "En Progreso";
+    case "completed":
+      return "Completado";
+    case "not-started":
+      return "No Iniciado";
+    default:
+      return "Desconocido";
+  }
+};
+
+export const getStatusColor = (status: string): string => {
+  switch (status) {
+    case "in-progress":
+      return "bg-yellow-500";
+    case "completed":
+      return "bg-green-500";
+    case "not-started":
+      return "bg-red-500";
+    default:
+      return "bg-slate-500";
+  }
+};

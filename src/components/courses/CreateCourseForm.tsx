@@ -53,6 +53,7 @@ function CreateCourseForm() {
       color: getRandomGradient(),
       grade: "",
       progress: 0,
+      status: "in-progress",
     };
 
     addCourse(newCourse);

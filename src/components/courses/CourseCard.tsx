@@ -3,6 +3,7 @@ import { BookMarked, Clock, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import type { ICourse } from "@/types/course.interface";
+import { getStatus, getStatusColor } from "@/utils";
 
 interface Props {
   course: ICourse;
@@ -34,8 +35,12 @@ function CourseCard({ course }: Props) {
               {course.credits} créditos
             </span>
           </div>
-          <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-            {course.grade === "" ? "F" : course.grade}
+          <div
+            className={`${getStatusColor(
+              course.status
+            )} text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold`}
+          >
+            {getStatus(course.status)}
           </div>
         </div>
 
