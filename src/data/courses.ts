@@ -33,7 +33,7 @@ const courses: ICourse[] = [
     credits: 3,
     progress: 85,
     grade: "A",
-    schedule: "Vie 17:00 - 19:50",
+    schedule: "Mie 07:00 - 08:50",
     room: "SRM",
     color: "from-emerald-400 to-emerald-600",
   },
