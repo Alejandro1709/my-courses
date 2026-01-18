@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { BookOpen } from "lucide-react";
 import { CoursesContext } from "@/context/CoursesContext";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { getRandomGradient } from "@/utils";
 import { z } from "zod";
 import type { ICourse } from "@/types/course.interface";
 
@@ -49,9 +50,9 @@ function CreateCourseForm() {
       id: courses.length + 1,
       ...formData,
       credits: +formData.credits,
-      color: "from-amber-400 to-amber-600",
-      grade: "A",
-      progress: 3,
+      color: getRandomGradient(),
+      grade: "",
+      progress: 0,
     };
 
     addCourse(newCourse);

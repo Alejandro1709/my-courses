@@ -35,7 +35,7 @@ function CourseCard({ course }: Props) {
             </span>
           </div>
           <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-            {course.grade}
+            {course.grade === "" ? "F" : course.grade}
           </div>
         </div>
 
