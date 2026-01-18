@@ -1,10 +1,13 @@
 import { RouterProvider } from "react-router";
 import { appRouter } from "./router/app.router";
+import { CoursesProvider } from "./context/CoursesContext";
 
 function CoursesApp() {
   return (
     <>
-      <RouterProvider router={appRouter} />
+      <CoursesProvider>
+        <RouterProvider router={appRouter} />
+      </CoursesProvider>
     </>
   );
 }

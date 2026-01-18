@@ -1,6 +1,6 @@
 import type { ICourse } from "@/types/course.interface";
 
-const courses: ICourse[] = [
+const mockCourses: ICourse[] = [
   {
     id: 1,
     name: "Algoritmos y Estructura de Datos",
@@ -39,4 +39,4 @@ const courses: ICourse[] = [
   },
 ];
 
-export default courses;
+export default mockCourses;
