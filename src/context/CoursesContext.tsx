@@ -4,6 +4,7 @@ import type { ICourse } from "@/types/course.interface";
 interface CoursesContext {
   courses: ICourse[];
   addCourse: (course: ICourse) => void;
+  editCourse: (course: ICourse) => void;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -33,11 +34,18 @@ export const CoursesProvider = ({
     setCourses([...courses, course]);
   };
 
+  const handleEditCourse = (course: ICourse) => {
+    setCourses((prev) =>
+      prev.map((c) => (c.id === course.id ? { ...c, ...course } : c))
+    );
+  };
+
   return (
     <CoursesContext
       value={{
         courses,
         addCourse: handleAddCourse,
+        editCourse: handleEditCourse,
       }}
     >
       {children}
