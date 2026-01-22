@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Bell, Plus, Settings, User } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Header() {
@@ -20,28 +20,6 @@ function Header() {
               <Plus className="w-4 h-4" />
               Añadir Curso
             </Link>
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <Bell className="w-5 h-5" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <Settings className="w-5 h-5" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <User className="w-5 h-5" />
           </Button>
         </div>
       </div>
