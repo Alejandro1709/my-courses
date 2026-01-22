@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 function CreateCoursePage() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-background to-secondary">
+    <div className="bg-linear-to-br from-background to-secondary">
       <div className="max-w-2xl mx-auto px-4 py-8 sm:py-12">
         {/* Header con botón de retorno */}
         <div className="flex items-center gap-4 mb-8">

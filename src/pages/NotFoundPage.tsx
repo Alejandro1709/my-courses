@@ -5,7 +5,7 @@ function NotFoundPage() {
   const navigate = useNavigate();
 
   return (
-    <main className="flex items-center justify-center px-4">
+    <div className="flex items-center justify-center px-4">
       <div className="w-full max-w-2xl">
         <div className="flex flex-col items-center justify-center text-center space-y-8">
           <div className="space-y-3 mt-6">
@@ -28,7 +28,7 @@ function NotFoundPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
