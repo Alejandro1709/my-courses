@@ -130,9 +130,11 @@ function CoursePage() {
 
             {/* Quick Actions */}
             <div className="space-y-2">
-              <Button className="w-full bg-primary hover:bg-primary/90">
-                <Award className="w-4 h-4 mr-2" />
-                Editar Curso
+              <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                <Link to={`/courses/${course.id}/edit`}>
+                  <Award className="w-4 h-4 mr-2" />
+                  Editar Curso
+                </Link>
               </Button>
               <Button variant="outline" className="w-full bg-transparent">
                 Contactar Profesor
