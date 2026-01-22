@@ -1,6 +1,6 @@
-import type { ICourse } from "@/types/course.interface";
 import { BookOpen } from "lucide-react";
 import { Link } from "react-router";
+import type { ICourse } from "@/types/course.interface";
 
 interface Props {
   course: ICourse;
@@ -148,6 +148,30 @@ function EditCourseForm({ course }: Props) {
             rows={4}
             className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
           />
+        </div>
+      </div>
+
+      <div className="border-t border-border pt-6">
+        <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+          <span className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-sm font-bold text-accent">
+            ✓
+          </span>
+          Estado
+        </h2>
+        <div>
+          <label
+            htmlFor="status"
+            className="block text-sm font-medium text-foreground mb-2"
+          >
+            Estado del curso
+          </label>
+
+          <select className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+            <option value="">-- Seleccionar Estado --</option>
+            <option value="in-progress">En Progreso</option>
+            <option value="completed">Completado</option>
+            <option value="not-started">No Empezado</option>
+          </select>
         </div>
       </div>
 
